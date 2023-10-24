@@ -4,22 +4,14 @@ import { AlignRigthIcon, CloudRainIcon, CloudyIcon, WindIcon } from './assets/Ic
 import { motion } from "framer-motion"
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import animationData from './assets/animations/animation_lo4p0wab.json'
+import { useWidth } from './assets/hooks/Width'
 function App() {
-
-  const [width, setWidth] = useState(0)
-  const [widthExtended, setWidthExtended] = useState(0)
   const carouselRef = useRef<HTMLDivElement | null>(null)
   const extendedCarouselRef = useRef<HTMLDivElement | null>(null)
-  const weatherRef = useRef<LottieRefCurrentProps>(null)
+  const { width } = useWidth({ carouselRef })
+  const { width: widthExtended } = useWidth({ carouselRef: extendedCarouselRef })
 
-  useEffect(() => {
-    if (carouselRef.current) {
-      setWidth(carouselRef.current?.scrollWidth - carouselRef.current?.offsetWidth)
-    }
-    if (extendedCarouselRef.current) {
-      setWidthExtended(extendedCarouselRef.current?.scrollWidth - extendedCarouselRef.current?.offsetWidth)
-    }
-  }, [])
+  const weatherRef = useRef<LottieRefCurrentProps>(null)
 
 
   return (
@@ -85,21 +77,21 @@ function App() {
 
               </motion.li >
               <motion.li >
-                <h3>14:00</h3>
+                <h3>15:00</h3>
                 <div className='weatherHourlyIcon'>
                   <CloudyIcon />
                   <h4>21°C</h4>
                 </div>
               </motion.li >
               <motion.li >
-                <h3>14:00</h3>
+                <h3>16:00</h3>
                 <div className='weatherHourlyIcon'>
                   <CloudyIcon />
                   <h4>21°C</h4>
                 </div>
               </motion.li >
               <motion.li >
-                <h3>14:00</h3>
+                <h3>17:00</h3>
                 <div className='weatherHourlyIcon'>
                   <CloudyIcon />
                   <h4>21°C</h4>
@@ -108,6 +100,30 @@ function App() {
             </motion.ul>
           </motion.div>
 
+          <article className='weatherWeekly'>
+            <div className='weatherWeeklyItem'>
+              <h3>Martes</h3>
+              <div>
+                <CloudyIcon />
+                <h4>21°C</h4>
+              </div>
+            </div>
+            <div className='weatherWeeklyItem'>
+              <h3>Miércoles</h3>
+              <div>
+                <CloudyIcon />
+                <h4>21°C</h4>
+              </div>
+            </div>
+            <div className='weatherWeeklyItem'>
+              <h3>Jueves</h3>
+              <div>
+                <CloudyIcon />
+                <h4>21°C</h4>
+              </div>
+            </div>
+
+          </article>
 
         </section>
       </main>
