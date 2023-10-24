@@ -5,9 +5,8 @@ font-family: 'Poppins', sans-serif; */
     --daily-blue: #7099E8;
     --transition-blue: #5682D7;
     --dark-blue: #1C4494;
-
-    /* #b7bdbf
-    #939b9e
+    --fancy-grey: #b7bdbf;
+    /*#939b9e
     #6f787b
     #53565d
     #38373e
@@ -52,16 +51,22 @@ h3 span {
 .temperature {
     font-family: Poppins, sans-serif;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.temperature div {
+    display: flex;
     gap: 0.5rem;
 }
 
-.temperature h4 {
-    font-size: 6rem;
+.temperature div h4 {
+    font-size: 8rem;
 }
 
-.temperature p {
+.temperature div p {
     font-size: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .carousel {
@@ -87,6 +92,7 @@ h3 span {
     width: 36px;
     height: 36px;
     opacity: 0.7;
+    margin-bottom: 1.5rem;
 }
 
 .carousel-item h3 {
@@ -94,11 +100,79 @@ h3 span {
     opacity: 0.7;
 }
 
-.carousel-item h4 {
+.carousel-item div {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.carousel-item div h4 {
     font-size: 1.8rem;
 }
 
-.carousel-item h4 span {
+.carousel-item div span {
     font-size: 1rem;
     opacity: 0.7;
+}
+
+.extendedWeather {
+    margin-top: 1.25rem;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: #fff;
+    color: var(--fancy-blue);
+}
+
+.divider {
+    width: 25%;
+    height: 0.4rem;
+    border-radius: 15px;
+    background-color: var(--daily-blue);
+    opacity: 0.7;
+    margin: 0.5rem auto;
+}
+
+.weatherHourly {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.weatherHourly li {
+    min-width: 90px;
+
+}
+
+.weatherHourly li h3 {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    background-color: var(--daily-blue);
+    padding: 0.3rem 1rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.weatherHourlyIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(183, 189, 191, 0.3);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.weatherHourlyIcon svg {
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0.25rem 0;
+}
+
+.weatherHourlyIcon h4 {
+    color: var(--dark-blue);
+    margin: 0.6rem 0;
+    font-size: 20px;
 }
