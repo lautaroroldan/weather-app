@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import './App.css'
 import { AlignRigthIcon, CloudRainIcon, CloudyIcon, WindIcon } from './assets/Icons'
 import { motion } from "framer-motion"
