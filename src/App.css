@@ -1,0 +1,104 @@
+/* font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif; */
+:root {
+    --fancy-blue: #8DB0F4;
+    --daily-blue: #7099E8;
+    --transition-blue: #5682D7;
+    --dark-blue: #1C4494;
+
+    /* #b7bdbf
+    #939b9e
+    #6f787b
+    #53565d
+    #38373e
+
+    #fce34f
+    #f0d744
+    #dfcb55 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--daily-blue);
+    min-height: 100dvh;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header svg {
+    width: 36px;
+    height: 36px;
+}
+
+main section {
+    padding: 1rem;
+}
+
+h3 span {
+    opacity: 0.7;
+}
+
+.temperature {
+    font-family: Poppins, sans-serif;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.temperature h4 {
+    font-size: 6rem;
+}
+
+.temperature p {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.carousel {
+    cursor: grab;
+    overflow: hidden;
+}
+
+.inner-carousel {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.carousel-item {
+    background-color: var(--transition-blue);
+    padding: 1rem;
+    min-width: 13rem;
+    max-width: 15rem;
+    border-radius: 15px;
+}
+
+.carousel-item svg {
+    width: 36px;
+    height: 36px;
+    opacity: 0.7;
+}
+
+.carousel-item h3 {
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.carousel-item h4 {
+    font-size: 1.8rem;
+}
+
+.carousel-item h4 span {
+    font-size: 1rem;
+    opacity: 0.7;
+}
