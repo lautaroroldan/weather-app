@@ -35,6 +35,11 @@ body {
     justify-content: space-between;
 }
 
+.header a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .header svg {
     width: 36px;
     height: 36px;
@@ -123,7 +128,7 @@ h3 span {
     color: var(--fancy-blue);
 }
 
-.divider {
+.line {
     width: 25%;
     height: 0.4rem;
     border-radius: 15px;
@@ -197,10 +202,7 @@ h3 span {
     gap: 0.6rem;
 }
 
-.weatherWeeklyItem::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
+.divider {
     width: 100%;
     height: 0.1rem;
     opacity: 0.3;
@@ -209,6 +211,8 @@ h3 span {
     margin: 0.5rem auto;
 }
 
+
+
 .weatherWeeklyItem h4 {
     font-size: 1.2rem;
 }
@@ -216,4 +220,115 @@ h3 span {
 .weatherWeeklyItem svg {
     width: 36px !important;
     height: 36px !important;
+}
+
+
+/* MENU */
+
+.menu {
+    background-color: #fff;
+    height: 100dvh;
+    color: #000;
+    padding: 1rem;
+}
+
+.menu svg {
+    width: 24px;
+    color: var(--fancy-blue);
+}
+
+.menuDivider {
+    padding: 1px 0;
+    opacity: 0.3;
+    border-radius: 15px;
+    background-color: var(--fancy-grey);
+    margin: 0.5rem auto;
+}
+
+.menuHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 1rem 0 2rem 0;
+}
+
+.menuHeader a {
+    position: absolute;
+    left: 0;
+    color: var(--daily-blue);
+}
+
+.menuHeader h2 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.menuSubtitle {
+    color: var(--dark-blue);
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.location div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.location div svg {
+    width: 20px;
+}
+
+.location div h3 {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.primaryBtn {
+    border: none;
+    background-color: var(--transition-blue);
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+    margin: 0.5rem 0;
+}
+
+.configuration {
+    margin: 1rem 0;
+}
+
+.configurationItem {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 0.4rem;
+}
+
+.configurationItem h5 {
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.configuration h6 {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--daily-blue);
+}
+
+.credits h5 {
+    opacity: 0.7;
+}
+
+.credits a {
+    color: var(--daily-blue);
+    text-decoration: underline;
+    cursor: pointer;
 }
